@@ -1,0 +1,57 @@
+
+
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer ul{
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+
+
+.footer ul li{
+  margin-left: 5px;
+
+}
+
+
+.footer ul label{
+  font-size: .7rem;
+}
+
+.footer ul progress {
+  display:block;
+  -webkit-appearance: none;
+  /* width: 80px; */
+}
+
+.footer ul progress::-webkit-progress-bar {
+    background: #2B3151;
+    height: 10px;
+    /* border-radius: 50px; */
+    padding: 2px;
+}
+
+.footer ul progress::-moz-progress-bar {  
+    /* background: black; */
+    /* border-radius: 50px; */
+    /* padding: 2px; */
+}
+
+.footer ul progress::-webkit-progress-value {
+    /* border-radius: 50px; */
+    background:orange;
+}
+
+
