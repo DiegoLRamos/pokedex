@@ -62,6 +62,8 @@ function App() {
 
     const teste = await api.get(event.target.value.split('v2/')[1])
 
+    console.log(teste)
+
     // setAllPokemons(teste.data.pokemon_species)
   }
 
@@ -72,12 +74,12 @@ function App() {
       <GlobalStyle />
 
 
-      <select value={option} onChange={handleSelectedGeneration}>
+      {/* <select value={option} onChange={handleSelectedGeneration}>
         <option defaultValue="Geração pokémons" >Geração pokémons</option>
         {generationPokemon.map((item) => (
           <option key={item.name} value={item.url}>Geração {item.name.split('-')[1].toUpperCase()}</option>
         ))}
-      </select>
+      </select> */}
 
 
       <S.ListPokemons>

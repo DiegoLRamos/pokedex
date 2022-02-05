@@ -4,7 +4,9 @@ export default function Modal(){
   return(
     <>
       <div className='body'>
-        <h2>{data.name}</h2>
+
+        <h1>Hello Pokémon!</h1>
+        {/* <h2>{data.name}</h2>
         
         <h4>Nº {data.id}</h4>
 
@@ -25,7 +27,7 @@ export default function Modal(){
               </label>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </>
   );

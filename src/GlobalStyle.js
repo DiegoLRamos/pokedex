@@ -13,7 +13,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #root{
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
     background: #2B3151;
     color: #FFF;
+
   }
 
 `;

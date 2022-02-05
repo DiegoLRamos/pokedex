@@ -21,12 +21,14 @@ export default function CardPokemon({ data }){
         // return item.species.name
       // }))
 
-
-
     }
 
     getEvolution();
   }, []);
+
+  function skillsPokemon(x){
+    console.log(x)
+  }
 
 
   return(
@@ -51,7 +53,7 @@ export default function CardPokemon({ data }){
         <h4>Nº {data.id}</h4>
       </S.CardBody>
 
-      <button className='btn-skills'>+ Skills</button>
+      <button onClick={() => skillsPokemon(data.id)} className='btn-skills'>+ Skills</button>
 
     </S.CardContainer>
 

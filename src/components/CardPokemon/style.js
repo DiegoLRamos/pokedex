@@ -8,13 +8,13 @@ export const CardContainer = styled.li`
   width: 95%;
   text-transform: capitalize;
 
-  & + li {
-    margin-top: 10px;
-  }
+  border-radius: 4px;
+
+  margin-top: 10px;
 
   .btn-skills{
     height: 50px;
-    width: 200px;
+    width: 90%;
 
     align-self: center;
     font-size: 1.5rem;
@@ -32,13 +32,8 @@ export const CardContainer = styled.li`
     }
   }
 
-
   @media only screen and (min-width: 560px) and (max-width: 1023px){
     width: 280px;
-
-    .btn-skills{
-      width: 90%;
-    }
   }
 
   @media only screen and (min-width: 1024px){
@@ -46,12 +41,17 @@ export const CardContainer = styled.li`
   }
 `;
 
+
+
+
+
+
 export const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   
-  height: 300px;
+  height: 250px;
 
   .img-pokemon{
     height: 200px;
@@ -61,9 +61,11 @@ export const CardHeader = styled.div`
   .img-pokeball{
     position: relative;
     top: -220px;
+
+    width: 250px;
     
-    opacity: 0.3;
-    filter: blur(3px);
+    opacity: 0.2;
+    /* filter: blur(3px); */
   }
 
   @media only screen and (min-width: 560px) and (max-width: 1023px){
