@@ -12,15 +12,17 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 
+  button{
+    cursor: pointer;
+  }
+
   #root{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background: #2B3151;
-    color: #FFF;
-
+    background: ${ ({theme}) => theme.body };
   }
 
 `;

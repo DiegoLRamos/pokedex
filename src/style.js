@@ -34,8 +34,8 @@ export const ListPokemons = styled.ul`
 
   list-style: none;
 
-  @media only screen and (min-width: 560px) and (max-width: 1023px){
-    justify-content: space-evenly;
+  @media only screen and (min-width: 450px) and (max-width: 1023px){
+    justify-content: space-around;
   }
 
   @media only screen and (min-width: 1024px){

@@ -5,9 +5,13 @@ import './style.css';
 
 import pokeball from '../../assets/img/pokeball.svg';
 
+import Loading from '../Loading/index';
+
+
 
 export default function CardPokemon({ data }){
   const [evolution, setEvolution] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function getEvolution(){
@@ -34,27 +38,26 @@ export default function CardPokemon({ data }){
   return(
     <S.CardContainer>
       <S.CardHeader>
-        <S.Types>
+        <ul className='types'>
           {data.types.map((e) => (
             <li key={e.type.name}>
               <img className='icon-type' src={require(`../../assets/img/poke-types/${e.type.name}.png`)} alt={`${e.type.name}`} title={`${e.type.name}`} />
               <span>{e.type.name}</span>
             </li>
           ))}
-        </S.Types>
-
-        <img className='img-pokemon' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png`} alt={`${data.name}`} title={`${data.name}`} />  
-
-        <img className='img-pokeball' src={pokeball} />
+        </ul>
       </S.CardHeader>
 
       <S.CardBody>
-        <h2>{data.name}</h2>
-        <h4>Nº {data.id}</h4>
+        <img className='img-pokemon' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png`} alt={`${data.name}`} title={`${data.name}`} />  
+        <img className='img-pokeball' src={pokeball} />
       </S.CardBody>
 
-      <button onClick={() => skillsPokemon(data.id)} className='btn-skills'>+ Skills</button>
-
+      <S.CardFooter>
+        <h2>{data.name}</h2>
+        <h4>Nº {data.id}</h4>
+      <button onClick={() => skillsPokemon(data.id)} className='btn-skills'>skills</button>
+      </S.CardFooter>
     </S.CardContainer>
 
     // <S.Card>
