@@ -9,6 +9,9 @@ import api from './services/api';
 import Loading from './components/Loading/index';
 import CardPokemon from './components/CardPokemon';
 
+import pokeball from './assets/img/pokeball.svg';
+import leftArrow from './assets/img/left-arrow.png';
+import rightArrow from './assets/img/right-arrow.png';
 
 import Logo from './assets/img/logo.png';
 
@@ -23,9 +26,7 @@ function App() {
   const [generationPokemon, setGenerationPokemon] = useState([]);
   const [option, setOption] = useState('');
 
-  const [isDark, setIsDark] = useState(false);
-
-
+  const [isDark, setIsDark] = useState(true);
 
 
   useEffect(() => {
@@ -114,20 +115,23 @@ function App() {
       <ThemeProvider theme={isDark ? darkTheme : lightTheme} >
       <GlobalStyle />
 
-      <button onClick={ () => setIsDark(!isDark) }>Thema</button>
-
-      <img src={Logo} alt='Logo Pokémon' style={{width: 200}} />
-
       {loading ? (
-        <Loading />
+        <S.Eitapreula>
+          <Loading />
+          <p>Carregando...</p>
+        </S.Eitapreula>
       ) : (
         <>
-          <select value={option} onChange={handleSelectedGeneration}>
-            <option defaultValue="Todos" selected>Todos</option>
+          <img src={Logo} alt='Logo Pokémon' style={{width: 200}} />
+
+          <button className='btn-theme' onClick={ () => setIsDark(!isDark) }> <img src={pokeball} /> </button>
+          
+          {/* <select value={option} onChange={handleSelectedGeneration}>
+            <option defaultValue="Todos" selected>All Pokémons</option>
             {generationPokemon.map((item) => (
-              <option key={item.name} value={item.url}>Geração {item.name.split('-')[1].toUpperCase()}</option>
+              <option key={item.name} value={item.url}>Generation {item.name.split('-')[1].toUpperCase()}</option>
             ))}
-          </select>
+          </select> */}
 
 
           <S.ListPokemons>
@@ -137,9 +141,15 @@ function App() {
           </S.ListPokemons>
 
           <S.PageActions>
-            <button onClick={previous} disabled={previousPage === null}>Previous</button>
-            <button onClick={next} disabled={nextPage === null}>Next</button>
+            <S.BtnPrevious onClick={previous} disabled={previousPage === null}> 
+              <img src={leftArrow} /> 
+            </S.BtnPrevious>
+            
+            <S.BtnNext onClick={next} disabled={nextPage === null}> 
+              <img src={rightArrow} /> 
+            </S.BtnNext>
           </S.PageActions>
+
         </>
       )}
 

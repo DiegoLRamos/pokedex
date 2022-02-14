@@ -1,9 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CardContainer = styled.li`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   width: 95%;
   margin-top: 30px;
@@ -12,10 +11,16 @@ export const CardContainer = styled.li`
   box-shadow: 0px 0px 8px rgb(0, 0, 0, 50%);
  
   background:  ${ ({theme}) => theme.bgcCard };
-  color: ${ ({theme}) => theme.colorFontCardDefault };
+  color: ${ ({theme}) => theme.colorFontCard };
   
   text-transform: capitalize;
   overflow: hidden;
+
+  &:hover{
+    .img-pokemon{
+      transform: scale(1.1, 1.1);
+    }
+  }
 
 
   @media only screen and (min-width: 415px) and (max-width: 1023px){
@@ -80,6 +85,8 @@ export const CardBody = styled.div`
     width: 200px;
     height: 200px;
     z-index: 1;  
+
+    transition: 0.5s ease-in;
   }
     
   .img-pokeball{

@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 
+  body{
+    height: 100vh;
+  }
+
   button{
     cursor: pointer;
   }
@@ -23,6 +27,27 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
 
     background: ${ ({theme}) => theme.body };
+
+
+    .btn-theme{
+      position: relative;
+      left: 100px;
+      top: 10px;
+
+
+      border: none;
+
+
+
+      background: ${ ({theme}) => theme.btnCard };
+
+      border-radius: 50%;
+
+      img{
+        width: 25px;
+      }
+
+    }
   }
 
 `;
