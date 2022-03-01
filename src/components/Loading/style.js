@@ -12,8 +12,9 @@ const rotate = keyframes`
 
 export const ContainerLoading = styled.div`
   img{
+    height: 150px;
+    width: 150px;
+    
     animation: ${rotate} 2s linear infinite;
-    height: 300px;
-    width: 300px;
   }
 `;

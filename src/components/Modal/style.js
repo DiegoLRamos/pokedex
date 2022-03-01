@@ -1,53 +1,89 @@
 import styled from 'styled-components';
 
 export const ContainerModal = styled.div`
-  position: fixed;
-  top: 0;
-
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
 
-  padding: 10px;
+  width: 100vw;
+  height: 100vh;
 
-  width: 100%;
-  height: 100%;
+  
+  text-transform: capitalize;
+  color: white;
+  
+  background: rgba(0, 0, 0, 0.8);
   z-index: 3;
 
-  background: yellowgreen;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  button{
-    border: none;
-    border-radius: 4px;
-    /* background: transparent; */
-    width: 50px;
 
-    padding: 20px;
 
-    align-self: flex-end;
+  @media only screen and (min-width: 415px) and (max-width: 1023px){
+    /* width: 80%; */
+    /* max-width: 500px; */
+    /* height: 80%; */
   }
 
+  @media only screen and (min-width: 1024px){
+    justify-content: center;
+    align-items: center;
+    /* width: 600px; */
+    /* height: 600px; */
+  }
 
+`;
+
+
+
+export const AreaModal = styled.div`
+  background: ${ ({theme}) => theme.bgcModal };
+
+  padding: 0px 10px;
+  
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  
   .area{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+
+    border: 1px solid red;
+    
+    margin-top: 50px;
+
+    button{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      border: none;
+      border-radius: 50%;
+
+      img{
+        height: 40px;
+      }
+
+    }
 
     .area-info{
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      img{
-        width: 150px;
-        /* border: 1px solid white; */
-      }
     }
 
 
     .area-status{
-      padding: 20px;
+      padding: 5px;
 
       p{
         font-size: 1.2rem;
@@ -114,4 +150,8 @@ export const ContainerModal = styled.div`
       }
     }
   }
+
+
+
+
 `;

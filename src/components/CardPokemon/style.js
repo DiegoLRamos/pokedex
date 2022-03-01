@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const CardContainer = styled.li`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  width: 95%;
   margin-top: 30px;
 
   border-radius: 15px;
@@ -22,14 +23,10 @@ export const CardContainer = styled.li`
     }
   }
 
-
-  @media only screen and (min-width: 415px) and (max-width: 1023px){
+  @media only screen and (min-width: 415px){
     width: 300px;
   }
 
-  @media only screen and (min-width: 1024px){
-    width: 300px;
-  }
 `;
 
 
@@ -39,6 +36,7 @@ export const CardHeader = styled.div`
   align-items: center;
   
   height: 100px;
+  width: 100%;
 
   .types{
     display: flex;
@@ -108,6 +106,7 @@ export const CardFooter = styled.div`
 
   padding: 20px 0;
 
+  width: 100%;
 
   .btn-skills{
     height: 50px;

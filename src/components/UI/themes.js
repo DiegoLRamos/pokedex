@@ -1,12 +1,22 @@
-import { branco, laranja, azulA, azulB, roxoA, roxoB, roxoC, roxoD, roxoE } from './variables';
+import { 
+  branco, 
+  preto, 
+  laranja, 
+  azulA, 
+  azulB, 
+  azulPastelA, 
+  azulPastelB, 
+  azulPastelC
+ } from './variables';
 
 export const lightTheme = {
-  body: roxoE,
-  // body: roxoB,
-  bgcCard: roxoD,
-  colorFontCard: roxoA,
-  btnCard: roxoC,
+  body: azulPastelC,
+  bgcCard: azulPastelB,
+  colorFontCard: preto,
+  btnCard: azulPastelA,
   colorBtnCard: branco,
+
+  bgcModal: azulPastelC
 };
 
 
@@ -16,4 +26,6 @@ export const darkTheme = {
   colorFontCard: branco,
   btnCard: laranja,
   colorBtnCard: azulA,
+
+  bgcModal: azulA
 };

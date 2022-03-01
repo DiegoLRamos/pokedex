@@ -5,14 +5,21 @@ export const PageActions = styled.div`
   justify-content: center;
 
   margin-top: 20px;
+
+  @media only screen and (min-width: 1024px){
+    justify-content: space-between;
+    margin: 40px 0;
+    width: 230px;
+  }
+
 `;
 
 const Button = styled.button`
-  border: 0;
-  margin-right: 5px;
-  color: white;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+  border: 0;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+  
+  margin-right: 5px;
 
   &:disabled{
     cursor: not-allowed;
@@ -26,6 +33,12 @@ const Button = styled.button`
   img{
     height: 50px;
   }
+
+  @media only screen and (min-width: 1024px){
+    position: static;
+    border-radius: 10px;
+    width: 100px;
+  }
 `;
 
 export const BtnNext = styled(Button)`
@@ -34,6 +47,12 @@ export const BtnNext = styled(Button)`
   right: 10px;
 
   z-index: 2;
+
+  @media only screen and (min-width: 1024px){
+    position: static;
+    border-radius: 10px;
+    width: 100px;
+  }
 `;
 
 export const BtnPrevious = styled(Button)`
@@ -42,6 +61,12 @@ export const BtnPrevious = styled(Button)`
   left: 10px;
 
   z-index: 2;
+
+  @media only screen and (min-width: 1024px){
+    position: static;
+    border-radius: 10px;
+    width: 100px;
+  }
 `;
 
 
@@ -67,7 +92,7 @@ export const ListPokemons = styled.ul`
 `;
 
 
-export const Eitapreula = styled.div`
+export const LoadingScreen = styled.div`
   height: 100vh;
 
   display: flex;
@@ -76,7 +101,7 @@ export const Eitapreula = styled.div`
   align-items: center;
 
   p{
-    font-size: 2rem;
-    color: #FFF;
+    font-size: 1.5rem;
+    color: #FFFFFF;
   }
 `;

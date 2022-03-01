@@ -28,21 +28,14 @@ export const GlobalStyle = createGlobalStyle`
 
     background: ${ ({theme}) => theme.body };
 
-
     .btn-theme{
-      position: relative;
-      left: 100px;
-      top: 10px;
-
+      position: fixed;
+      top: 20px;
+      right: 20px;
 
       border: none;
-
-
-
-      background: ${ ({theme}) => theme.btnCard };
-
-      border-radius: 50%;
-
+      background: transparent;
+      
       img{
         width: 25px;
       }
