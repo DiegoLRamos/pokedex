@@ -6,6 +6,8 @@ export const CardContainer = styled.li`
   justify-content: center;
   align-items: center;
 
+  width: 300px;
+
   margin-top: 30px;
 
   border-radius: 15px;
@@ -21,10 +23,6 @@ export const CardContainer = styled.li`
     .img-pokemon{
       transform: scale(1.1, 1.1);
     }
-  }
-
-  @media only screen and (min-width: 415px){
-    width: 300px;
   }
 
 `;

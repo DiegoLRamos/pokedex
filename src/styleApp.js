@@ -76,19 +76,13 @@ export const ListPokemons = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
+  
   list-style: none;
 
-  @media only screen and (min-width: 450px) and (max-width: 1023px){
+  @media only screen and (min-width: 450px){
     justify-content: space-around;
-  }
-
-  @media only screen and (min-width: 1024px){
-    justify-content: space-around;
-
     max-width: 1440px;
   }
-
 `;
 
 

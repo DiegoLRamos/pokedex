@@ -8,56 +8,36 @@ export const ContainerModal = styled.div`
 
   width: 100vw;
   height: 100vh;
-
   
   text-transform: capitalize;
   color: white;
   
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 3;
 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-
-
-  @media only screen and (min-width: 415px) and (max-width: 1023px){
-    /* width: 80%; */
-    /* max-width: 500px; */
-    /* height: 80%; */
-  }
-
-  @media only screen and (min-width: 1024px){
-    justify-content: center;
-    align-items: center;
-    /* width: 600px; */
-    /* height: 600px; */
-  }
-
 `;
-
 
 
 export const AreaModal = styled.div`
   background: ${ ({theme}) => theme.bgcModal };
 
-  padding: 0px 10px;
-  
   width: 100%;
   height: 100%;
+  padding: 20px;
 
   position: relative;
-  
+
   .area{
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 
-    border: 1px solid red;
-    
     margin-top: 50px;
 
     button{
@@ -74,84 +54,65 @@ export const AreaModal = styled.div`
 
     }
 
-    .area-info{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-    }
-
-
-    .area-status{
-      padding: 5px;
-
-      p{
-        font-size: 1.2rem;
-      }
-
-      ul{
-        list-style: none;
-
-
-        li{
-          label{
-            font-size: .8rem;
-          }
-
-          progress {
-            display:block;
-            -webkit-appearance: none;
-            /* width: 100px; */
-
-          }
-
-          progress::-webkit-progress-bar {
-              background: #2B3151;
-              height: 10px;
-              /* border-radius: 50px; */
-              padding: 2px;
-          }
-
-          progress::-moz-progress-bar {  
-              background: black;
-              /* border-radius: 50px; */
-              /* padding: 2px; */
-          }
-
-          progress::-webkit-progress-value {
-              /* border-radius: 50px; */
-              background:orange;
-          }
-
-        }
-      }
-    }
 
   }
 
+  @media only screen and (min-width: 415px){
+    max-width: 500px;
+    max-height: 500px;
 
-  .area-evolution{
+    border-radius: 10px;
+
+    .area{
+      flex-wrap: nowrap;
+    }
+  }
+
+`;
+
+
+export const AreaImages = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+  }
+`;
 
-    margin-top: 20px;
 
-    p{
-      font-size: 1.2rem;
-    }
+export const AreaStatus = styled.div`
+  padding: 0 5px;
 
-    div{
-      display: flex;
-      justify-content: space-around;
-      
-      img{
-        height: 100px;
-        width: 100px;
+  p{
+    font-size: 1.2rem;
+  }
+
+  ul{
+    list-style: none;
+
+    li{
+      label{
+        font-size: .8rem;
+      }
+
+      progress {
+        display: block;
+        -webkit-appearance: none;
+      }
+
+      progress::-webkit-progress-bar {
+        background: ${ ({theme}) => theme.bgcStatus };
+        height: 10px;
+        padding: 2px;
+      }
+
+      progress::-webkit-progress-value {
+        background: orange;
       }
     }
   }
-
-
-
-
 `;

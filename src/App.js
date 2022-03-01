@@ -59,7 +59,7 @@ function App() {
         </S.LoadingScreen>
       ) : (
         <>
-          <img src={Logo} alt='Logo Pokémon' style={{width: 200}} />
+          <img src={Logo} alt='Logo Pokémon' style={{width: 200, marginTop: '10px'}} />
 
           <button 
             className='btn-theme' 

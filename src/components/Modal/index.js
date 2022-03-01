@@ -14,11 +14,10 @@ export default function Modal({ datapokemon, closeModal }){
             <img src={close} alt='button close' /> 
           </button>
 
-
-          <div className='area-info'>
+          <S.AreaImages>
             <img style={{width: 120}} src={datapokemon.sprites.other.dream_world.front_default} alt={datapokemon.name} />
               
-            <div>
+            <div className='pokemon-perfil'>
               <img style={{width: 80}} src={datapokemon.sprites.front_default} alt={datapokemon.name} />
               <img style={{width: 80}} src={datapokemon.sprites.back_default} alt={datapokemon.name} />
             </div>
@@ -26,10 +25,10 @@ export default function Modal({ datapokemon, closeModal }){
             <h2>{datapokemon.name}</h2>
             <h4>Nº {datapokemon.id}</h4>
 
-          </div>   
+          </S.AreaImages>   
 
 
-          <div className='area-status'>
+          <S.AreaStatus>
             <p>Status</p>
             <ul>
               {datapokemon.stats.map((item) => (
@@ -41,7 +40,8 @@ export default function Modal({ datapokemon, closeModal }){
                 </li>
               ))}
             </ul>
-          </div> 
+          </S.AreaStatus> 
+
         </div>
 
       </S.AreaModal>

@@ -16,7 +16,8 @@ export const lightTheme = {
   btnCard: azulPastelA,
   colorBtnCard: branco,
 
-  bgcModal: azulPastelC
+  bgcModal: azulPastelC,
+  bgcStatus: azulA,
 };
 
 
@@ -27,5 +28,6 @@ export const darkTheme = {
   btnCard: laranja,
   colorBtnCard: azulA,
 
-  bgcModal: azulA
+  bgcModal: azulA,
+  bgcStatus: azulB,
 };
