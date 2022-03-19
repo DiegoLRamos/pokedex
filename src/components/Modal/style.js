@@ -19,15 +19,21 @@ export const ContainerModal = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
 `;
 
 
 export const AreaModal = styled.div`
   background: ${ ({theme}) => theme.bgcModal };
+  color: ${ ({theme}) => theme.colorFontCard };
 
   width: 100%;
   height: 100%;
   padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   position: relative;
 
@@ -35,10 +41,16 @@ export const AreaModal = styled.div`
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 
-    margin-top: 50px;
+    width: 100%;
+    
+    h1{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
 
     button{
       position: absolute;
@@ -51,13 +63,10 @@ export const AreaModal = styled.div`
       img{
         height: 40px;
       }
-
     }
-
-
   }
 
-  @media only screen and (min-width: 415px){
+  @media only screen and (min-width: 767px){
     max-width: 500px;
     max-height: 500px;
 
@@ -65,6 +74,7 @@ export const AreaModal = styled.div`
 
     .area{
       flex-wrap: nowrap;
+      margin-top: 40px;
     }
   }
 

@@ -23,18 +23,19 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
+
   useEffect(() => {
     setLoading(true);
 
     async function loadPokemons(){
-        const { data } = await api.get(currentPage);
-        setNextPage(data.next);
-        setPreviousPage(data.previous);
+      const { data } = await api.get(currentPage);
+      setNextPage(data.next);
+      setPreviousPage(data.previous);
 
-        const response = await Promise.all(data.results.map((item) => api.get(item.url)));
-        const format = response.map((req) => req.data);
-        setAllPokemons(format);
-        setLoading(false);
+      const response = await Promise.all(data.results.map((item) => api.get(item.url)));
+      const format = response.map((req) => req.data);
+      setAllPokemons(format);
+      setLoading(false);
     }
 
     loadPokemons();
@@ -59,11 +60,14 @@ function App() {
         </S.LoadingScreen>
       ) : (
         <>
-          <img src={Logo} alt='Logo Pokémon' style={{width: 200, marginTop: '10px'}} />
+          <img src={Logo} alt='Logo Pokémon' style={{width: 240, marginTop: '10px'}} />
 
           <button 
             className='btn-theme' 
-            onClick={ () => setIsDark(!isDark) }
+            onClick={ () => { 
+              setIsDark(!isDark)
+              console.log(isDark)
+            } }
           > 
             {isDark ? (
               <img src={light} />

@@ -6,9 +6,9 @@ export default function Modal({ datapokemon, closeModal }){
   return(
     <S.ContainerModal>
       <S.AreaModal>
-        <h1>skills</h1>
-
         <div className='area'>
+        
+          <h1>skills</h1>
 
           <button onClick={closeModal}> 
             <img src={close} alt='button close' /> 
@@ -35,7 +35,8 @@ export default function Modal({ datapokemon, closeModal }){
                 <li key={item.stat.name}>
                   <label>
                     {item.stat.name}
-                  <progress title={`${item.base_stat}`} value={item.base_stat} max="100"></progress>
+                  <progress title={`${item.base_stat}`} value={item.base_stat} max="100">
+                  </progress>
                   </label>
                 </li>
               ))}
