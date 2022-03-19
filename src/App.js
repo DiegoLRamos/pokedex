@@ -64,11 +64,9 @@ function App() {
 
           <button 
             className='btn-theme' 
-            onClick={ () => { 
-              setIsDark(!isDark)
-              console.log(isDark)
-            } }
-          > 
+            onClick={ () => setIsDark(!isDark) }
+          >
+
             {isDark ? (
               <img src={light} />
             ) : (
